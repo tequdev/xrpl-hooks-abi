@@ -1,0 +1,23 @@
+{
+  "name": "xrpl-hooks-abi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@transia/xrpl": "2.7.3-alpha.27",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@transia/hooks-toolkit": "^1.0.14",
+    "buffer": "^6.0.3",
+    "hooks-schema": "^0.1.1",
+    "xrpl": "^3.0.0"
+  }
+}
