@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +12,8 @@
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
     "@transia/xrpl": "2.7.3-alpha.27",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@transia/hooks-toolkit": "^1.0.14",
