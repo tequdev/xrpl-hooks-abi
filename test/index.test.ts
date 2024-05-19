@@ -725,7 +725,6 @@ describe('txnParametersParser', () => {
 
 describe('hookParametersParser', () => {
   it('', () => {
-
     const definition: HookParameterDefinition = {
       fields: [
         {
@@ -827,6 +826,30 @@ describe('hookParametersParser', () => {
       name: 'Initial Seat',
       key: [{ name: 'Index', value: 0 }],
       data: [{ name: 'Account', value: 'rD74dUPRFNfgnY2NzrxxYRXN4BrfGSN6Mv' }]
+    })
+  })
+
+  it('Variable-length VarString', () => {
+    const definition: HookParameterDefinition = {
+      fields: [
+        {
+          name: 'uri',
+          hookparam_key: [{ name: "URI", type: "VarString", byte_length: 3, pattern: "URI", exclude: true }],
+          hookparam_data: [{ name: "URI", type: "VarString", to_last: true }]
+        }
+      ],
+    }
+    const result = hookParametersParser({
+      HookParameter: {
+        HookParameterName: "555249",
+        HookParameterValue: "697066733A2F2F6261666B7265696669326A686A687276797274336571696E75717264716E37686861776478767A676C7A6879627A3461656B7A616C336E71356371"
+      }
+    }, definition)
+    console.log(result)
+    expect(result).toEqual({
+      name: 'uri',
+      key: [],
+      data: [{ name: 'URI', value: 'ipfs://bafkreifi2jhjhrvyrt3eqinuqrdqn7hhawdxvzglzhybz4aekzal3nq5cq' }]
     })
   })
 })

@@ -35,7 +35,8 @@ const getByteLength = (state: Field, buffer: Buffer) => {
   if (state.type === 'Array' && state.length_prefix) return getLengthPrefix(buffer)
   const fixedLength = getTypeByteLength(state.type)
   if (fixedLength) return fixedLength
-  throw new Error(`${state.type}: length_prefix, byte_length, or a valid fixed length type must be defined`)
+  if (state.type === 'VarString' && state.to_last) return buffer.length
+  throw new Error(`${state.type}: length_prefix, byte_length, to_last or a valid fixed length type must be defined`)
 }
 
 const bufferToReadableData = (
