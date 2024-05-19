@@ -1,5 +1,5 @@
 import type { HookParameterDefinition, OperationDefinition, TxnParameterDefinition } from 'hooks-schema/dist'
-import { hookParametersParser, hookStateParser, invokeBlobParser, readOperation, txnParametersParser, writeOperation } from '../src/parser'
+import { hookParametersParser, hookStateParser, invokeBlobParser, readOperation, txnParametersParser, writeOperation } from '../src'
 
 describe('hookStateParser', () => {
   it('UInt8, VarString, AccountID', () => {

@@ -3,7 +3,7 @@ import { hexToXfl } from '@transia/hooks-toolkit/dist/npm/src/libs/binary-models
 import type { HookParameter } from '@transia/xrpl/dist/npm/models/common'
 import type { HookState } from '@transia/xrpl/dist/npm/models/ledger'
 import { Buffer } from 'buffer/'
-import type { Field, HookParameterDefinition, HookStateDefinition, InvokeBlobDefinition, OperationDefinition, TxnParameterDefinition } from 'hooks-schema/dist'
+import type { Field, HookParameterDefinition, HookStateDefinition, InvokeBlobDefinition, OperationDefinition, TxnParameterDefinition } from 'hooks-schema'
 import { decodeAccountID, encodeAccountID } from 'xrpl/dist/npm/utils'
 import sha512Half from 'xrpl/dist/npm/utils/hashes/sha512Half'
 
