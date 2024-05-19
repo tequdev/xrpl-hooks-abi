@@ -1,5 +1,5 @@
-import { floatToXfl } from '@transia/hooks-toolkit'
 import { hexToXfl } from '@transia/hooks-toolkit/dist/npm/src/libs/binary-models'
+import { floatToXfl } from '@transia/hooks-toolkit/dist/npm/src/utils'
 import type { HookParameter } from '@transia/xrpl/dist/npm/models/common'
 import type { HookState } from '@transia/xrpl/dist/npm/models/ledger'
 import { Buffer } from 'buffer/'
